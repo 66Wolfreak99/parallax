@@ -84,6 +84,21 @@ body{
 
 }
 
+.sonic{
+    position: absolute;
+    left: 446px;
+    bottom: 100px;
+    
+}
+
+.sonic-sprite{
+    width: 146px;
+    height: 146px;
+    background-image: url(./sprites/sonic_sheet.png);
+    background-repeat: no-repeat;
+
+}
+
 
 @keyframes example {
     0%   {background-position-x: 0px;}
