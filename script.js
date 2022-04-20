@@ -11,7 +11,7 @@ function tailsFlying(){
     "-115px",
     ]
 
-    const refreshRate = 1000 / 30;
+    const refreshRate = 1000 / 15;
     const maxFrames = 2;
     let sprite = document.getElementById('tailsSprite');
     let frameCount = 1;
@@ -37,7 +37,7 @@ function sonicRunning(){
 
     ]
 
-    const refreshRate = 1000 / 30;
+    const refreshRate = 1000 / 15;
     const maxFrames = 4;
     let sprite = document.getElementById('sonicSprite');
     let frameCount = 1;
