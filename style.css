@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+}
+
+body{
+    background-color: #000090;
+}
+.container{
+    width: 100vw;
+    height: auto;
+    background-color: bisque;
+    position: absolute;
+    bottom: 0;
+}
+
+.parallax{
+    width: 100%;
+    background-repeat: repeat-x;
+}
+
+#parallax1{
+    height: 336px;
+    background-color:rgb(196, 142, 77);
+    background-image: url(./sprites/emerald1.png);
+
+    animation-name: example;
+    animation-duration: 28s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse
+}
+#parallax2{
+    height: 48px;
+    background-color:rgb(148, 97, 35);
+    background-image: url(./sprites/emerald2.png);
+
+    animation-name: example;
+    animation-duration: 11s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse
+}
+#parallax3{
+    height: 48px;
+    background-color:rgb(83, 63, 38);
+    background-image: url(./sprites/emerald3.png);
+
+    animation-name: example;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse
+}
+#parallax4{
+    height: 336px;
+    background-color:rgb(17, 12, 7);
+    background-image: url(./sprites/emerald4.png);
+
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse
+}
+
+.tails{
+    position: absolute;
+    left: 150px;
+    top: 300px;
+    
+
+    animation-name: tails_flying;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate
+}
+
+.tails-sprite{
+    width: 116px;
+    height: 104px;
+    background-image: url(./sprites/tails_sheet.png);
+    background-repeat: no-repeat;
+
+}
+
+
+@keyframes example {
+    0%   {background-position-x: 0px;}
+    100% {background-position-x: 1536px;}
+}
+
+@keyframes tails_flying {
+    0%   {top: 280px;}
+    100% {bottom: 320px;}  
+}
+
+@keyframes tails_animation {
+    from  {background-position-x: 0px;}
+    to {background-position-x: -115px;}
+}
