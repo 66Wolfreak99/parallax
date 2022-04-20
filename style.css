@@ -99,6 +99,15 @@ body{
 
 }
 
+.smoltornado{
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+}
+
 
 @keyframes example {
     0%   {background-position-x: 0px;}

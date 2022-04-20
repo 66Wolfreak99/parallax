@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+}
+
+body{
+    background-color: #2448fc;
+    overflow: hidden;
+}
+.container{
+    width: 100vw;
+    height: auto;
+    background-color: bisque;
+    position: absolute;
+    bottom: 0;
+    
+}
+
+.parallax{
+    width: 100%;
+    background-repeat: repeat-x;
+}
+
+#parallax01{
+    height: 24px;
+    background-color:rgb(196, 142, 77);
+    background-image: url(../sprites/skyclouds01.png);
+
+    animation-name: example;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse
+}
+#parallax02{
+    height: 24px;
+    background-color:rgb(148, 97, 35);
+    background-image: url(../sprites/skyclouds02.png);
+
+    animation-name: example;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse
+}
+#parallax03{
+    height: 48px;
+    background-color:rgb(83, 63, 38);
+    background-image: url(../sprites/skyclouds03.png);
+
+    animation-name: example;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse
+}
+#parallax04{
+    height: 48px;
+    background-color:rgb(17, 12, 7);
+    background-image: url(../sprites/skyclouds04.png);
+
+    animation-name: example;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse
+}
+
+#parallax1{
+    height: 120px;
+    background-color:rgb(196, 142, 77);
+    background-image: url(../sprites/skyclouds1.png);
+
+    animation-name: example;
+    animation-duration: 28s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse
+}
+#parallax2{
+    height: 24px;
+    background-color:rgb(148, 97, 35);
+    background-image: url(../sprites/skyclouds2.png);
+
+    animation-name: example;
+    animation-duration: 11s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse
+}
+#parallax3{
+    height: 96px;
+    background-color:rgb(83, 63, 38);
+    background-image: url(../sprites/skyclouds3.png);
+
+    animation-name: example;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse
+}
+#parallax4{
+    height: 24px;
+    background-color:rgb(17, 12, 7);
+    background-image: url(../sprites/skyclouds4.png);
+
+    animation-name: example;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse
+}
+
+#parallax5{
+    height: 24px;
+    background-color:rgb(196, 142, 77);
+    background-image: url(../sprites/skyclouds5.png);
+
+    animation-name: example;
+    animation-duration: 14s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse
+}
+#parallax6{
+    height: 24px;
+    background-color:rgb(148, 97, 35);
+    background-image: url(../sprites/skyclouds6.png);
+
+    animation-name: example;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse
+}
+#parallax7{
+    height: 48px;
+    background-color:rgb(83, 63, 38);
+    background-image: url(../sprites/skyclouds7.png);
+
+    animation-name: example;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse
+}
+#parallax8{
+    height: 72px;
+    background-color:rgb(17, 12, 7);
+    background-image: url(../sprites/skyclouds8.png);
+
+    animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse
+}
+
+#parallax9{
+    height: 96px;
+    background-color:rgb(83, 63, 38);
+    background-image: url(../sprites/skyclouds9.png);
+
+    animation-name: example;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse
+}
+#parallax10{
+    height: 192px;
+    background-color:rgb(17, 12, 7);
+    background-image: url(../sprites/skyclouds10.png);
+
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse
+}
+
+.tornado{
+    position: absolute;
+    left: 26px;
+    top: 380px;
+    
+
+    animation-name: tails_flying, tornado_entrance;
+    animation-duration: 2s, 5s;
+    animation-iteration-count: infinite, 1;
+    animation-timing-function: ease-in-out, cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    animation-direction: alternate, normal;
+    z-index:3
+}
+
+.tornado-sprite{
+    width: 362px;
+    height: 194px;
+    background-image: url(../sprites/tornado_sheet.png);
+    background-repeat: no-repeat;
+
+}
+
+.sonic {
+    width: 87px;
+    height: 117px;
+    background-image: url(../sprites/sonic.png);
+    position: absolute;
+    right: 45px;
+    top: -91px;
+}
+
+.deathegg {
+    width: 300px;
+    height: 279px;
+    background-image: url(../sprites/deathegg.png);
+    position: absolute;
+    right: 100px;
+    top: -10px;
+    transform: rotateY(180deg);
+    z-index: 1;
+
+    animation-name: deathegg_entrance;
+    animation-duration: 12s;
+    animation-iteration-count: 1 ;
+    animation-timing-function: ease-out;
+}
+
+
+
+@keyframes example {
+    0%   {background-position-x: 0px;}
+    100% {background-position-x: 1536px;}
+}
+
+@keyframes tails_flying {
+    0%   {top: 390px;}
+    100% {bottom: 370px;}  
+}
+
+@keyframes tails_animation {
+    from  {background-position-x: 0px;}
+    to {background-position-x: -115px;}
+}
+
+@keyframes deathegg_entrance {
+    from  {right: -400px; top: 150px;}
+    to {right: 100px; top: -10px;}
+}
+
+@keyframes tornado_entrance {
+    0%   {left: -590px; top: 300px;}
+    50%   {left: 490px; top: 430px;}
+    100% {left: 26px; top: 380px;} 
+}
+
