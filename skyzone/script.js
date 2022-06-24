@@ -1,12 +1,48 @@
 window.onload = () =>{
-    tornado();
+    animationHandler("tornadoSprite", 4, 12);
 }
 
 
 
 
+/**
+ * Allows an html element to be animated using a spritesheet as it's background image.
+ * @param {string} spriteName The id of the element to be animated
+ * @param {number} maxFrames Set the number of frames in the animation
+ * @param {number} animationSpeed Set the number of images per second
+ * @param {number} loopPoint (Optional, default value is 0) Set a certain frame in the animation as the starting point of the animation loop
+*/
+function animationHandler(spriteName, maxFrames, animationSpeed, loopPoint = 0 ){
 
-function tornado(){
+    const refreshRate = 1000 / animationSpeed;
+    let sprite = document.getElementById(spriteName);
+    let spriteFrame = 0;
+    let spriteLength = sprite.offsetWidth;
+    let frame = 0;
+
+    if(loopPoint < 0){
+        loopPoint = 0;
+    } else if(loopPoint > maxFrames){
+        loopPoint = maxFrames;
+    };
+
+    window.setInterval(() => {
+
+        frame++;
+        spriteFrame = spriteFrame - spriteLength;
+
+    if (frame >= maxFrames ) {
+        frame = loopPoint;
+        spriteFrame = spriteLength * -loopPoint;
+    }
+    
+    sprite.style.backgroundPositionX = spriteFrame + "px";
+    
+    }, refreshRate);
+    
+}
+
+/*function tornado(){
     var spriteFrame = [
     "0px",
     "-362px",
@@ -30,4 +66,4 @@ function tornado(){
     sprite.style.backgroundPositionX = spriteFrame[frame];
     
     }, refreshRate);
-}
+}*/
