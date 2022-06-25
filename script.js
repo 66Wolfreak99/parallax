@@ -1,6 +1,6 @@
 window.onload = () =>{
 animationHandler("tailsSprite", 2, 15); //Tails flying 
-animationHandler("sonicSprite", 4, 15, 10); //Sonic running
+animationHandler("sonicSprite", 4, 15); //Sonic running
 }
 
 
@@ -22,8 +22,9 @@ function animationHandler(spriteName, maxFrames, animationSpeed, loopPoint = 0 )
 
     if(loopPoint < 0){
         loopPoint = 0;
-    } else if(loopPoint > maxFrames){
-        loopPoint = maxFrames;
+    };
+    if(loopPoint >= maxFrames){
+        loopPoint = maxFrames-1;
     };
 
     window.setInterval(() => {

@@ -22,8 +22,9 @@ function animationHandler(spriteName, maxFrames, animationSpeed, loopPoint = 0 )
 
     if(loopPoint < 0){
         loopPoint = 0;
-    } else if(loopPoint > maxFrames){
-        loopPoint = maxFrames;
+    };
+    if(loopPoint >= maxFrames){
+        loopPoint = maxFrames-1;
     };
 
     window.setInterval(() => {
@@ -41,6 +42,7 @@ function animationHandler(spriteName, maxFrames, animationSpeed, loopPoint = 0 )
     }, refreshRate);
     
 }
+
 
 /*function tornado(){
     var spriteFrame = [
