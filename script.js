@@ -10,15 +10,16 @@ animationHandler("sonicSprite", 4, 15); //Sonic running
  * @param {string} spriteName The id of the element to be animated
  * @param {number} maxFrames Set the number of frames in the animation
  * @param {number} animationSpeed Set the number of images per second
- * @param {number} loopPoint (Optional, default value is 0) Set a certain frame in the animation as the starting point of the animation loop
+ * @param {number} loopPoint (Optional, default value is 1) Set a certain frame in the animation as the starting point of the animation loop
 */
-function animationHandler(spriteName, maxFrames, animationSpeed, loopPoint = 0 ){
+function animationHandler(spriteName, maxFrames, animationSpeed, loopPoint = 1 ){
 
     const refreshRate = 1000 / animationSpeed;
     let sprite = document.getElementById(spriteName);
     let spriteFrame = 0;
     let spriteLength = sprite.offsetWidth;
     let frame = 0;
+    loopPoint = loopPoint - 1;
 
     if(loopPoint < 0){
         loopPoint = 0;
