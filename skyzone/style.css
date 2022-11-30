@@ -69,6 +69,8 @@ body{
     height: 120px;
     background-color:rgb(196, 142, 77);
     background-image: url(../sprites/skyclouds1.png);
+    z-index: 0;
+    position: relative;
 
     animation-name: example;
     animation-duration: 28s;
@@ -80,6 +82,8 @@ body{
     height: 24px;
     background-color:rgb(148, 97, 35);
     background-image: url(../sprites/skyclouds2.png);
+    z-index: 0;
+    position: relative;
 
     animation-name: example;
     animation-duration: 11s;
@@ -91,6 +95,8 @@ body{
     height: 96px;
     background-color:rgb(83, 63, 38);
     background-image: url(../sprites/skyclouds3.png);
+    z-index: 0;
+    position: relative;
 
     animation-name: example;
     animation-duration: 20s;
@@ -102,6 +108,8 @@ body{
     height: 24px;
     background-color:rgb(17, 12, 7);
     background-image: url(../sprites/skyclouds4.png);
+    z-index: 0;
+    position: relative;
 
     animation-name: example;
     animation-duration: 18s;
@@ -114,6 +122,8 @@ body{
     height: 24px;
     background-color:rgb(196, 142, 77);
     background-image: url(../sprites/skyclouds5.png);
+    z-index: 0;
+    position: relative;
 
     animation-name: example;
     animation-duration: 14s;
@@ -125,6 +135,8 @@ body{
     height: 24px;
     background-color:rgb(148, 97, 35);
     background-image: url(../sprites/skyclouds6.png);
+    z-index: 0;
+    position: relative;
 
     animation-name: example;
     animation-duration: 12s;
@@ -136,6 +148,8 @@ body{
     height: 48px;
     background-color:rgb(83, 63, 38);
     background-image: url(../sprites/skyclouds7.png);
+    z-index: 2;
+    position: relative;
 
     animation-name: example;
     animation-duration: 8s;
@@ -147,6 +161,8 @@ body{
     height: 72px;
     background-color:rgb(17, 12, 7);
     background-image: url(../sprites/skyclouds8.png);
+    z-index: 2;
+    position: relative;
 
     animation-name: example;
     animation-duration: 5s;
@@ -159,6 +175,8 @@ body{
     height: 96px;
     background-color:rgb(83, 63, 38);
     background-image: url(../sprites/skyclouds9.png);
+    z-index: 2;
+    position: relative;
 
     animation-name: example;
     animation-duration: 3s;
@@ -170,6 +188,8 @@ body{
     height: 192px;
     background-color:rgb(17, 12, 7);
     background-image: url(../sprites/skyclouds10.png);
+    z-index: 2;
+    position: relative;
 
     animation-name: example;
     animation-duration: 2s;
@@ -243,7 +263,7 @@ body{
 }
 
 @keyframes deathegg_entrance {
-    from  {right: -400px; top: 150px;}
+    from  {right: -50px; top: 550px;}
     to {right: 100px; top: -10px;}
 }
 

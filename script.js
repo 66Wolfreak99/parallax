@@ -1,7 +1,7 @@
 window.onload = () =>{
-animationHandler("tailsSprite", 2, 15); //Tails flying 
-animationHandler("sonicSprite", 4, 15); //Sonic running
-}
+animationHandler("tailsSprite", 2, 15); //Tails flying
+animationHandler("sonicSprite", 4, 15); //Sonic running 
+
 
 
 
@@ -12,8 +12,8 @@ animationHandler("sonicSprite", 4, 15); //Sonic running
  * @param {number} animationSpeed Set the number of images per second
  * @param {number} loopPoint (Optional, default value is 1) Set a certain frame in the animation as the starting point of the animation loop
 */
-function animationHandler(spriteName, maxFrames, animationSpeed, loopPoint = 1 ){
-
+function animationHandler(spriteName, maxFrames, animationSpeed, loopPoint = 1, loopAnimation = true ){
+    
     const refreshRate = 1000 / animationSpeed;
     let sprite = document.getElementById(spriteName);
     let spriteFrame = 0;
@@ -28,20 +28,32 @@ function animationHandler(spriteName, maxFrames, animationSpeed, loopPoint = 1 )
         loopPoint = maxFrames-1;
     };
 
-    window.setInterval(() => {
+    const interval = setInterval(() => {
 
         frame++;
         spriteFrame = spriteFrame - spriteLength;
 
-    if (frame >= maxFrames ) {
-        frame = loopPoint;
-        spriteFrame = spriteLength * -loopPoint;
-    }
+        if (loopAnimation === false ){
+            if(frame >= maxFrames){
+                clearInterval(interval)
+            }
+        };
+
+        if (frame >= maxFrames ) {
+            frame = loopPoint;
+            spriteFrame = spriteLength * -loopPoint;
+        }
+
+    
     
     sprite.style.backgroundPositionX = spriteFrame + "px";
     
     }, refreshRate);
     
+}
+
+
+
 }
 
 /*function tailsFlying(){
